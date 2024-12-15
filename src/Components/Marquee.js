@@ -17,7 +17,7 @@ function MarqueeComponent() {
           <img src='/images/Picture7.jpg' alt='Gasco Company'/>
           <img src='/images/Picture8.jpg' alt='Power Egypt Company'/>
           <img src='/images/Picture9.png' alt='Egypt Gas Company'/>
-          <img src="/images/الشركة-المصرية-للمنتجات-النيتروجيني.webp" />
+          <img src="/images/الشركة-المصرية-للمنتجات-النيتروجيني.webp" alt=''/>
           <img src='/images/Picture10.png' alt='FMC Company'/>
           <img src='/images/Picture11.jpg' alt='COSMOS Company'/>
           <img src='/images/Picture12.jpg' alt='Power Egypt Company'/>

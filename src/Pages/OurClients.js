@@ -1,192 +1,65 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
-import { useTranslation } from "react-i18next"; // Import the useTranslation hook
-import i18n from "i18next"; // Import i18n instance
-import "./stylePage.css";
-import { Helmet } from "react-helmet";
-import { useEffect } from "react";
-function OurClients() {
-  const { t, i18n } = useTranslation(); // Initialize the useTranslation hook
-  useEffect(() => {
-    // Set direction attribute of .contact-us element based on the language
-    const ourClientsElement = document.querySelector(".our-clients");
-    if (ourClientsElement) {
-      ourClientsElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
-    }
-  }, [i18n.language]);
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const OurClients = () => {
+  const clients = [
+    { id: 1, logo: "/images/logo1.jpg", alt: "Company 1" }, 
+    { id: 2, logo: "/images/logo2.jpg", alt: "Company 2" },
+    { id: 3, logo: "/images/logo3.jpg", alt: "Company 3" },
+    { id: 4, logo: "/images/logo4.jpg", alt: "Company 4" },
+    { id: 5, logo: "/images/logo5.jpg", alt: "Company 5" },
+    { id: 5, logo: "/images/logo6.jpg", alt: "Company 5" },
+    { id: 5, logo: "/images/logo7.jpg", alt: "Company 5" },
+  ];
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{t("OurClients.titles")}</title> {/* Translate the title */}
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
-      <div className="our-clients">
-        <h1 className="text-center fw-bolder  ">{t("OurClients.title")}</h1>
-        <div className="d-flex justify-content-center ">
-          <hr className="hr" />
-        </div>
-
-        <div className="company-list pb-5 ">
-          <Row sm={1} md={3} lg={6} className="g-5  w-75 m-auto ">
-            <div>
-              <Col>
-                <a
-                  href="https://www.gem.wiki/Damietta_Segas_LNG_Terminal"
-                  target="_blank"
-                >
-                  <img src="/images/Picture1.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href=" https://orascom.com/" target="_blank">
-                  <img src="/images/logo4.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="https://www.mopco-eg.com/en" target="_blank">
-                  <img src="/images/logo.png" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="https://energyegypt.net/tag/enpc/" target="_blank">
-                  <img src="/images/الشركة-المصرية-للمنتجات-النيتروجيني.webp" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a
-                  href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9_%D9%84%D9%85%D8%B4%D8%AA%D9%82%D8%A7%D8%AA_%D8%A7%D9%84%D8%BA%D8%A7%D8%B2"
-                  target="_blank"
-                >
-                  <img src="/images/195px-UGDC.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="">
-                  <img src="/images/logo2.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="https://www.enppi.com/ " target="_blank">
-                  <img src="/images/Picture6.gif" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="https://www.gasco.com.eg/" target="_blank">
-                  <img src="/images/Logo-color-variations-09.png" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a
-                  href="https://www.osman.net/og/misraymond.php"
-                  target="_blank"
-                >
-                  <img src="/images/Picture4.jpg" />
-                </a>
-              </Col>
-            </div>
-
-            <div>
-              <Col>
-                <a href="https://www.egyptgas.com.eg/ " target="_blank">
-                  <img src="/images/Picture5.png" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="https://ferrometalco.com/" target="_blank">
-                  <img src="/images/Picture10.png" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="http://cosmos-eng.com/" target="_blank">
-                  <img src="/images/Picture11.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a
-                  href="https://www.facebook.com/eng.mohamed.bisher.eleraky/"
-                  target="_blank"
-                >
-                  <img src="/images/Picture8.jpg" />
-                </a>
-              </Col>
-            </div>
-            <div>
-              <Col>
-                <a href="">
-                  <img src="/images/Picture6.jpg" />
-                </a>
-              </Col>
-            </div>
-
-            <div>
-              <Col>
-                <a href="http://www.egegypt.org/Ar/" target="_blank">
-                  <img src="/images/Picture7.gif" />
-                </a>
-              </Col>
-            </div>
-
-            <div>
-              <Col>
-                <a href="">
-                  <img src="/images/logo1.jpg" />
-                </a>
-              </Col>
-            </div>
-
-            <div>
-              <Col>
-                <a href="">
-                  <img src="/images/logo3.jpg" />
-                </a>
-              </Col>
-            </div>
-
-            <div>
-              <Col>
-                <a href="">
-                  <img src="/images/logo5.jpg" />
-                </a>
-              </Col>
-            </div>
-          </Row>
-        </div>
-        <div className="d-flex justify-content-center">
-          <hr className=" w-75"/>
-        </div>
-        <div className="w-75 m-auto  mt-4 mb-4">
-          <Row sm={1} md={1} lg={1}>
-            <Col>
-              <h5 className="OurClients__h5">{t("OurClients.content")}</h5>
-            </Col>
-          </Row>
-        </div>
-      </div>
-    </>
+    <div className="ourClients" dir="rtl">
+      <h2 className="section-title text-center fw-bolder">عملائنا الكرام</h2>
+      <p className="section-description mt-5 mb-5" style={{ fontSize: "20px" }}>
+        نحن نفخر بالتعاون مع بعض الشركات الأكثر شهرة في الصناعة. وفيما يلي بعض
+        عملائنا الكرام الذين يثقون بنا في أعمالهم.
+      </p>
+      <Slider {...sliderSettings} className="clients-slider">
+        {clients.map((client) => (
+          <div key={client.id} className="client-slide">
+            <img src={client.logo} alt={client.alt} className="client-logo" />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
-}
+};
 
 export default OurClients;

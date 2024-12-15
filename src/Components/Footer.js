@@ -1,84 +1,55 @@
-import React from 'react';
-import { Row , Col ,Button } from 'react-bootstrap';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from 'react';
-import i18n from 'i18next'; // Import i18n instance
-import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 import "./style.css";
-
 function Footer() {
-  const { t } = useTranslation(); // Initialize the useTranslation hook
-  useEffect(() => {
-    // Set direction attribute of .contact-us element based on the language
-    const fooerElement = document.querySelector('.footer');
-    if (fooerElement) {
-      fooerElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    }
-  }, [i18n.language]);
   return (
     <>
-      <div className='footer'>
-        <Row sm={1} md={2} lg={4}  className='w-75'>
+      <div className="">
+        <div className="footer">
           <div>
-          <Col>
             <div>
-              <h2 className='fw-bolder'>{t('footer.contactusTitle')}</h2>
-              <div className='d-flex align-items-center '>
-                <img src='/images/location.png' width={"20px"}/>
-                <p className='mt-4 me-2'> {t('footer.contactusLocation')}</p>
+              <h2 className="fw-bolder">اتصل بنا</h2>
+              <div className="d-flex align-items-center ">
+                <img src="/images/location.png" width={"20px"} alt="" />
+                <p className="mt-4 me-2">دمياط: فارسكور - شارع 5 حديث </p>
               </div>
-              <div className='d-flex align-items-center '>
-                <img src='/images/mail.png' width={"20px"}/>
-                <p className='mt-3 me-2'>{t('footer.contactusMail')}</p>
+              <div className="d-flex align-items-center ">
+                <img src="/images/mail.png" width={"20px"} alt="" />
+                <p className="mt-3 me-2">Marinetop2.services@gmail.com</p>
               </div>
-              <div className='d-flex align-items-center '>
-                <img src='/images/phone.png' width={"20px"}/>
-                <p className='mt-3 me-2'>{t('footer.contactusPhone')}</p>
+              <div className="d-flex align-items-center ">
+                <img src="/images/phone.png" width={"20px"} alt="" />
+                <p className="mt-3 me-2">01025050102 - 01204348040</p>
               </div>
             </div>
-          </Col>
           </div>
           <div>
-          <Col >
-            <h2 className='fw-bolder'>{t('footer.information')}</h2>
-            <p className='mt-4'>{t('footer.information1')}</p>
-            <p>{t('footer.information2')}</p>
-            <p>{t('footer.information3')}</p>
-            <p>{t('footer.information5')}</p>
-            <p>{t('footer.information6')}</p>
-          </Col>
+            <h2 className="fw-bolder">معلومات</h2>
+            <p className="mt-4">سياسة الخصوصية</p>
+            <p>شروط الخدمة</p>
           </div>
-          
           <div>
-          <Col>
-            <h2 className='fw-bolder'>{t('footer.Account')}</h2>
-            <p className='mt-3'>{t('footer.AccountSearch')}</p>
-            <p>{t('footer.AccountInfo')}</p>
-            <p>{t('footer.AccountInstructions')}</p>
-            <p>{t('footer.AccountConatactus')}</p>
-            <p>{t('footer.AccountChart')}</p>
-          </Col>
+            <h2 className="fw-bolder">حساب</h2>
+            <p className="mt-3">بحث</p>
+            <p>معلومات عنا</p>
+            <p>التعلميات</p>
+            <p>اتصل بنا</p>
           </div>
-          
           <div>
-          <Col>
-            <h2 className='fw-bolder'>{t('footer.company')}</h2>
-            <p className='mt-4'>{t('footer.comapnyLlist')}</p>
-            <p>{t('footer.companyNote')}</p>
-            <p>{t('footer.companyPrice')}</p>
-            <p>{t('footer.companyAds')}</p>
-            <p>{t('footer.companyInner')}</p>
-          </Col>
+            <h2 className="fw-bolder">شركات</h2>
+            <p className="mt-4">الشركات المدرجة</p>
+            <p>دفتر الشركات</p>
+            <p>الأرباح</p>
+            <p>المعاملات الداخلية</p>
           </div>
-
-        </Row>
-
-        <div className='mt-5 w-100 copy-rights p-3 d-flex  justify-content-center '>
-          <h5 className=' pt-3 text-center '>{t('footer.copyright')}</h5>
+        </div>
+        <div className="reserved-copy">
+          <h5 className="" style={{ marginRight: "" }}>
+            جميع الحقوق محفوظة بواسطة مارين توب 2024 ©{" "}
+          </h5>
         </div>
       </div>
     </>
-  )
+  );
 }
-
 export default Footer;

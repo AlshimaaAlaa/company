@@ -1,56 +1,21 @@
-/* our-clients */
-.our-clients{
-  margin-top: 20px;
-  font-family: Philosopher;
-  margin-top: 150px;
-}
-.OurClients__h5{
-  line-height: 35px;
-}
-.service img{
-  width: 100%;
-  height: 150px;
-  transition: 2000ms;
-}
-.service{
-  overflow: hidden;
-  background-color: white;
-  border: 1px solid black;
-  filter: drop-shadow(2px 2px 2px);
-}
-.service div{
-  overflow: hidden;
-}
-.service img:hover{
-  transform: scale(1.1);
-}
-.company-list img{
-  width: 100%;
-  height: 120px;
-  transition: 2000ms;
-}
-.company-list__div img{
-  width: 100%;
-  height: 100px;
-  cursor: pointer;
-}
-.company-list img:hover{
-  transform: scale(1.15);
-}
-/* end of our-clients  */
-
 /* about us */
 .about-us{
-  font-family: Philosopher;
-  margin-top: 150px;
+  font-family: Spectral;
+  /* margin-top: 150px; */
+}
+.work-item{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .our-work{
-  background-color: rgb(220, 219, 219);
+  background-color: rgb(227, 227, 227);
   padding:30px 0px 100px 0px;
   margin-top: 50px;
 }
-.our-work img{
-  width: 100%;
+.work-img{
+  width: 450px;
   height: 300px;
   border-radius: 10px;
 }
@@ -108,32 +73,37 @@
 
 /* contact us */
 .contact-us{
-  font-family: Philosopher;
-  padding: 100px 0px 50px 0px;
+  margin: 100px 0px 100px 0px;
+  font-family: Spectral;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 100px 0px 50px 0px; */
 }
-.contact-us__container{
-  background-color: black;
-  border-radius:10px;
-  box-shadow:6px 6px 6px 6px rgb(81, 81, 81) ;
+.item1 , .item2 ,.item3{
+  background-color: rgb(239, 239, 239);
+  border-radius: 10px;
   padding: 20px;
-  margin-top: 60px;
+  width: 400px;
+  height: 200px;
+  position: relative;
 }
-.hr3{
-  width: 20%;
+.item1__image ,.item2__image , .item3__image{
+  position: absolute;
+  content: "";
+  top: -33px;
+  left: 42%;
 }
-.white-line {
-  border-top: 1px solid white; 
+.item1__image img{
+  width: 60px;
+}
+.item2__image img{
+  width: 60px;
+}
+.item3__image img{
+  width: 60px;
+}
+a{
+  color: #000;
 }
 /* end of contact-us */
-
-@media screen and (min-width:375px) and (max-width:767px) {
-  .our-work__div{
-    width: 350px;
-    background-color: white;
-  }
-}
-@media screen and (min-width:1024px) and (max-width:1200px) {
-  .our-work__div{
-    width:300px;
-  }
-}

@@ -1,78 +1,68 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
-import i18n from 'i18next'; // Import i18n instance
-import { Row ,Col } from 'react-bootstrap';
+import React from "react";
 import "./style.css";
 
 function Scope() {
-  const { t, i18n } = useTranslation(); // Initialize the useTranslation hook
-  useEffect(() => {
-    // Set direction attribute of .contact-us element based on the language
-    const workScopeElement = document.querySelector('.workScope');
-    if (workScopeElement) {
-      workScopeElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    }
-  }, [i18n.language]);
   return (
     <>
-      <div className='workScope'>
-        <h1 className='text-center fw-bolder '>{t('workscope.title')}</h1>
-        <div className=' d-flex  justify-content-center '>
-          <hr className='hr2'/>
+      <div className="workScope">
+        <h1 className="text-center fw-bolder ">نطاق الأعمال</h1>
+        <div className=" d-flex  justify-content-center ">
+          <hr className="hr2" />
         </div>
-        <Row sm={1} md={2} lg={3} className='m-5 g-3'>
-          <div className=''>
-          <Col>
-            <div className='workScope__item'>
-              <div className=' d-flex justify-content-center '>
-                <img src='/images/Subcontractor.jpg' alt='Subcontractor'/>
+        <div className="workScope__items">
+          <div className="">
+            <div className="workScope__item">
+              <div className=" d-flex justify-content-center ">
+                <img src="/images/Subcontractor.jpg" alt="Subcontractor" />
               </div>
-              <div className=''>
-                <h5 className='text-center fw-bolder mt-4 mb-3 '>{t('workScope.item1title')}</h5>
-                <p className='p-3'>{t('workScope.item1par')}</p>
+              <div className="">
+                <h5 className="text-center fw-bolder mt-4 mb-3 ">
+                  مقاول من الباطن
+                </h5>
+                <p className="p-3">
+                  تتعاون شركة مارين توب مع كبرى المؤسسات والشركات وتعمل معهم
+                  كمقاول من الباطن في مشاريع ضخمة وتساهم بخبرتها وكفاءتها
+                  وعمالتها ومعداتها في إنجاز هذه المشاريع
+                </p>
               </div>
             </div>
-          </Col>
           </div>
-
           <div>
-          <Col>
-            <div className='workScope__item'>
-              <div className=' d-flex justify-content-center '>
-                <img src='/images/Projectpartnership.jpg' alt='Project partnership' />
+            <div className="workScope__item">
+              <div className=" d-flex justify-content-center ">
+                <img
+                  src="/images/Projectpartnership.jpg"
+                  alt="Project partnership"
+                />
               </div>
-              <h5 className='text-center fw-bolder mt-4 mb-3'>{t('workScope.item2title')}</h5>
-              <p className='p-3'>{t('workScope.item2par')}</p>
+              <h5 className="text-center fw-bolder mt-4 mb-3">
+                شراكة المشروعات
+              </h5>
+              <p className="p-3">
+                تمتلك شركة مارين توب القدرات والكفاءات والخبرات اللازمة التي
+                تؤهلها لتكون شريكاً في شركات محلية وعالمية وفي مشاريع مختلفة
+                ومتنوعة تتعلق بمجال الخدمات الملاحية والبترولية
+              </p>
             </div>
-          </Col>
           </div>
-          
-          {/* <div>
-          <Col>
-            <div className='workScope__item'>
-              <div className=' d-flex justify-content-center '>
-                <img src='/images/Main general contractor.jpg' alt='Main general contractor' />
-              </div>
-              <h5 className='text-center fw-bolder mt-4 mb-3 '>{t('workScope.item3title')}</h5>
-              <p className='p-3'>{t('workScope.item3par')}</p>
-            </div>
-          </Col>
-          </div>
-         */}
           <div>
-          <Col>
-            <div className='workScope__item'>
-              <div className=' d-flex justify-content-center '>
-                <img src='/images/Franchise areas.jpg' alt='Franchise areas' />
+            <div className="workScope__item">
+              <div className=" d-flex justify-content-center ">
+                <img src="/images/Franchise areas.jpg" alt="Franchise areas" />
               </div>
-              <h5 className='text-center fw-bolder mt-4 mb-3 '>{t('workScope.item4title')}</h5>
-              <p className='p-3'>{t('workScope.item4par')}</p>
+              <h5 className="text-center fw-bolder mt-4 mb-3 ">
+                مقاول عام رئيسي
+              </h5>
+              <p className="p-3">
+                تفتخر شركة مارين توب بتنفيذ الأعمال الهندسية والإنشائية
+                لمشاريعها، بما في ذلك الأعمال الهندسية لخطوط الغاز الطبيعي
+                وإعداد التصاميم وتوريد وتركيب الخطوط وأعمال التشغيل والصيانة
+                والدعم الفني واجراءات التراخيص وتوريد العمالة وغيرها من الخدمات
+              </p>
             </div>
-          </Col>
           </div>
-        </Row>
-    </div>
+        </div>
+      </div>
     </>
   );
 }
